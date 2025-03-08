@@ -2,7 +2,11 @@
 
 ## Project Overview
 
-This project is a Flutter-based UI implementation for a digital payment application inspired by the provided design. The UI consists of a payment selection screen, a digital debit card interface, and a custom bottom navigation bar with an arc shape. The app ensures smooth animations, state management with Provider, and integration with a backend using Faker.js for generating financial data dynamically.
+This project is a Flutter-based UI implementation for a digital payment application inspired by the provided design. The UI comprises a payment selection screen, a digital debit card interface, and a custom bottom navigation bar with an arc shape. The app ensures smooth animations, state management with Provider, and integration with a backend using Faker.js for generating financial data dynamically.
+
+## Demo
+
+https://github.com/user-attachments/assets/9494fd0e-3f22-41c3-9718-40fca5b3d72b
 
 ## Features Implemented
 
@@ -18,16 +22,14 @@ This project is a Flutter-based UI implementation for a digital payment applicat
 
 #### Faker.js Integration for Random Finance Data
 
-**Used Faker.js via a Node.js Express backend to generate random finance-related data such as:**
+Used Faker.js via a Node.js Express backend to generate random finance-related data such as:
 - accountNumber()
 - creditCardNumber()
 - creditCardCVV()
 
 #### Flutter fetches specific data from the backend API using HTTP requests, allowing us to request only required finance data instead of fetching the entire module.
 
-#### Provider for State Management
-
-**Used Provider to manage UI states such as:**
+#### Provider for State Management, Used Provider to manage UI states such as:
 
 - isCardFrozen: Determines whether card details should be blurred or visible.
 - selectedPaymentMode: Controls active tab selection between "Pay" and "Card".
@@ -36,9 +38,9 @@ This project is a Flutter-based UI implementation for a digital payment applicat
 ## We created a Node.js + Express backend to serve dynamic finance-related data using Faker.js.
 
 **some end-points:**
-/api/account-number =>	Returns a random bank account number
-/api/credit-card-number =>	Returns a random credit card number
-/api/credit-card-cvv =>	Returns a random CVV number
+- /api/account-number =>	Returns a random bank account number
+- /api/credit-card-number =>	Returns a random credit card number
+- /api/credit-card-cvv =>	Returns a random CVV number
 
 #### simply fetch the data through API requests
 class ApiService {
@@ -53,12 +55,16 @@ throw Exception('Failed to load credit card number');
 } } }
 
 ## Note: 
-- Instead of local host add your IP4 address
-- It does not do freeze animation instead it display image but the image does not export perfectly from Figma.
+- The App is made for only Android devices as it is run on Windows
+- Instead of the local host, add your IPv4 address
+- It does not do freeze animation; instead, it displays an image but does not export perfectly from Figma.
 -  Find Your Local IP Address
+  
    **Windows:** Run ipconfig in Command Prompt → Look for IPv4 Address (e.g., 192.168.1.100).
+   
    **Mac/Linux:** Run ifconfig → Find inet under Wi-Fi.
-- Do the changes in server.js file also, set the port to either 3000 or 5000
+
+- Do the changes in the server.js file also, set the port to either 3000 or 5000
 
 ## Tech Stack
 #### Technology	           Purpose
